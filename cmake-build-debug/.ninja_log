@@ -87,5 +87,6 @@
 5968	6214	6884724830924638	_deps/imgui-sfml-build/libImGui-SFML_d.dll	dc2e947c8ebc176f
 5968	6214	6884724830924638	_deps/imgui-sfml-build/libImGui-SFML_d.dll.a	dc2e947c8ebc176f
 6214	6313	6884724831598794	src/example_exe.exe	bf327c90d4bf437e
-5	405	6884726101908366	src/CMakeFiles/aero_sim_exe.dir/main.cpp.obj	7a4b006158b6a05d
-405	496	6884726102482164	src/aero_sim_exe.exe	422b39cef698805
+8	359	6885468164659056	src/CMakeFiles/aero_sim_exe.dir/main.cpp.obj	7a4b006158b6a05d
+359	450	6885468165236828	src/aero_sim_exe.exe	3e1495afab37a856
+5	76	6885468161833238	src/CMakeFiles/aero_sim_exe.dir/menu.cpp.obj	d088a83da6cf80ab

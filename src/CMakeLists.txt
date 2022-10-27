@@ -1,4 +1,4 @@
-add_executable(aero_sim_exe main.cpp)
+add_executable(aero_sim_exe main.cpp menu.cpp menu.h geometry/geometry.cpp geometry/geometry.h)
 target_link_libraries(aero_sim_exe PRIVATE ImGui-SFML::ImGui-SFML)
 
 # Copy DLLs needed for runtime on Windows

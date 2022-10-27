@@ -5,7 +5,10 @@
 #include <imgui-SFML.h>
 #include <imgui.h>
 
+#include "menu.h"
 int main() {
+    bool show_demo = false;
+
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Aero Sim");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
@@ -23,7 +26,12 @@ int main() {
 
         ImGui::SFML::Update(window, deltaClock.restart());
 
-        ImGui::ShowDemoWindow();
+        if (show_demo) {
+            ImGui::ShowDemoWindow();
+        } else {
+            ShowMenuWindow();
+        }
+
 
         window.clear();
         ImGui::SFML::Render(window);
