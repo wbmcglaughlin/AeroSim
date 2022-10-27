@@ -37,19 +37,20 @@ void ShowMenuWindow() {
         return;
     }
 
-    if (ImGui::Button("Geometry")) {
+    ImVec2 button_width = ImVec2(ImGui::GetWindowSize().x * 1.0f, 0.0f);
+    if (ImGui::Button("Geometry", button_width)) {
 
     }
 
-    if (ImGui::Button("Meshing")) {
+    if (ImGui::Button("Meshing", button_width)) {
 
     }
 
-    if (ImGui::Button("Setup")) {
+    if (ImGui::Button("Setup", button_width)) {
 
     }
 
-    if (ImGui::Button("Solver")) {
+    if (ImGui::Button("Solver", button_width)) {
 
     }
 
