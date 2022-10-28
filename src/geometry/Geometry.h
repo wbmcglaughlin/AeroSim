@@ -6,28 +6,17 @@
 #define AEROSIM_GEOMETRY_H
 
 #include "imgui.h"
-#include "SFML/Graphics/RenderWindow.hpp"
-#include "SFML/Graphics/RectangleShape.hpp"
+#include "SFML/Graphics.hpp"
+#include "Enclosure.h"
 
 class Geometry {
 public:
-    float enclosure_x;
-    float enclosure_y;
-    float enclosure_w;
-    float enclosure_h;
-    float origin_x;
-    float origin_y;
+    sf::Vector2<float> geometry_origin{};
+    Enclosure enclosure{EnclosureDimensions(100.0f, 100.0f, 100.0f, 100.0f)};
 
     void draw(sf::RenderWindow *window);
 
-    Geometry(float e_x, float e_y, float e_w, float e_h) {
-        enclosure_x = e_x;
-        enclosure_y = e_y;
-        enclosure_w = e_w;
-        enclosure_h = e_h;
-        origin_x = 0;
-        origin_y = 0;
-    }
+    Geometry();
 };
 
 

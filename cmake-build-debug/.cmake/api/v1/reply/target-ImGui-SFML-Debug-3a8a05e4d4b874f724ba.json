@@ -2,10 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "src/aero_sim_exe.exe"
+			"path" : "_deps/imgui-sfml-build/libImGui-SFML_d.dll"
 		},
 		{
-			"path" : "src/aero_sim_exe.pdb"
+			"path" : "_deps/imgui-sfml-build/libImGui-SFML_d.dll.a"
+		},
+		{
+			"path" : "_deps/imgui-sfml-build/libImGui-SFML_d.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -13,13 +16,15 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
+			"install",
 			"target_link_libraries",
-			"add_custom_command"
+			"target_compile_definitions",
+			"target_include_directories"
 		],
 		"files" : 
 		[
-			"src/CMakeLists.txt"
+			"cmake-build-debug/_deps/imgui-sfml-src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -29,19 +34,43 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 1,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 2,
+				"line" : 172,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 7,
+				"line" : 94,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 135,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 139,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 129,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 104,
 				"parent" : 0
 			}
 		]
@@ -58,22 +87,29 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 2,
+					"define" : "IMGUI_SFML_EXPORTS"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "IMGUI_SFML_SHARED_LIB"
+				},
+				{
+					"backtrace" : 6,
 					"define" : "IMGUI_USER_CONFIG=\"imconfig-SFML.h\""
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
+					"backtrace" : 7,
 					"path" : "C:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/imgui-src"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 7,
 					"path" : "C:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/imgui-sfml-src"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "C:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/sfml-src/include"
 				}
 			],
@@ -82,8 +118,11 @@
 			[
 				0,
 				1,
+				2,
 				3,
-				5
+				4,
+				5,
+				6
 			]
 		}
 	],
@@ -91,61 +130,72 @@
 	[
 		{
 			"backtrace" : 3,
-			"id" : "sfml-window::@5730451e331e3690ae65"
-		},
-		{
-			"backtrace" : 3,
 			"id" : "sfml-system::@8cb1db2982443611e568"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "sfml-graphics::@98af38147d5fa7e70f61"
+			"id" : "sfml-window::@5730451e331e3690ae65"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "ImGui-SFML::@0d4f94df99120bc7405e"
+			"id" : "sfml-graphics::@98af38147d5fa7e70f61"
 		}
 	],
-	"id" : "aero_sim_exe::@145eef247bfb46b6828c",
+	"id" : "ImGui-SFML::@0d4f94df99120bc7405e",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/example"
+		}
+	},
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
 				"fragment" : "",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 2,
-				"fragment" : "_deps\\imgui-sfml-build\\libImGui-SFML_d.dll.a",
-				"role" : "libraries"
-			},
-			{
+				"backtrace" : 3,
 				"fragment" : "_deps\\sfml-build\\lib\\libsfml-graphics-d.a",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
 				"fragment" : "_deps\\sfml-build\\lib\\libsfml-window-d.a",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "_deps\\sfml-build\\lib\\libsfml-system-d.a",
-				"role" : "libraries"
-			},
-			{
+				"backtrace" : 3,
 				"fragment" : "-lopengl32",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 3,
 				"fragment" : "-lglu32",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 4,
 				"fragment" : "-limm32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "_deps\\sfml-build\\lib\\libsfml-system-d.a",
 				"role" : "libraries"
 			},
 			{
@@ -155,12 +205,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "aero_sim_exe",
-	"nameOnDisk" : "aero_sim_exe.exe",
+	"name" : "ImGui-SFML",
+	"nameOnDisk" : "libImGui-SFML_d.dll",
 	"paths" : 
 	{
-		"build" : "src",
-		"source" : "src"
+		"build" : "_deps/imgui-sfml-build",
+		"source" : "cmake-build-debug/_deps/imgui-sfml-src"
 	},
 	"sourceGroups" : 
 	[
@@ -170,18 +220,11 @@
 			[
 				0,
 				1,
-				3,
-				5
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
 				2,
+				3,
 				4,
-				6,
-				7
+				5,
+				6
 			]
 		}
 	],
@@ -190,47 +233,45 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.cpp",
+			"path" : "cmake-build-debug/_deps/imgui-sfml-src/imgui-SFML.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/menu.cpp",
+			"path" : "cmake-build-debug/_deps/imgui-src/imgui.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/menu.h",
-			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/geometry/Geometry.cpp",
+			"path" : "cmake-build-debug/_deps/imgui-src/imgui_draw.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "src/geometry/Geometry.h",
-			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/geometry/geometry_gui.cpp",
+			"path" : "cmake-build-debug/_deps/imgui-src/imgui_tables.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/geometry/geometry_gui.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "cmake-build-debug/_deps/imgui-src/imgui_widgets.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/state.h",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "cmake-build-debug/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "cmake-build-debug/_deps/imgui-src/imgui_demo.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "SHARED_LIBRARY"
 }

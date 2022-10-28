@@ -5,8 +5,7 @@
 #include "Geometry.h"
 
 void Geometry::draw(sf::RenderWindow *window) {
-    sf::RectangleShape rect = sf::RectangleShape(sf::Vector2(enclosure_w, enclosure_h));
-    rect.setPosition(enclosure_x, enclosure_y);
-
-    window->draw(rect);
+    enclosure.draw(window);
 }
+
+Geometry::Geometry() = default;

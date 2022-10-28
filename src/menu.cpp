@@ -55,5 +55,9 @@ void ShowMenuWindow(State *state) {
 
     }
 
+    if (ImGui::Button("Demo", button_width)) {
+        *state = demo;
+    }
+
     ImGui::End();
 }

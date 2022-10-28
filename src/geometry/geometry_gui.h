@@ -7,8 +7,9 @@
 #define AEROSIM_GEOMETRY_GUI_H
 
 #include "imgui.h"
+#include "Geometry.h"
 #include "../state.h"
 
-void ShowGeometryWindow(State *state);
+void ShowGeometryWindow(State *state, Geometry *geometry);
 
 #endif //AEROSIM_GEOMETRY_GUI_H

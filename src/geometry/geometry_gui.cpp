@@ -4,7 +4,7 @@
 
 #include "geometry_gui.h"
 
-void ShowGeometryWindow(State *state) {
+void ShowGeometryWindow(State *state, Geometry *geometry) {
     if (!ImGui::Begin("Geometry"))
     {
         // Early out if the window is collapsed, as an optimization.
