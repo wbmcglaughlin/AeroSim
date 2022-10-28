@@ -185,7 +185,7 @@ public:
     /// future OpenGL rendering operations (so you shouldn't care
     /// about it if you're not doing direct OpenGL stuff).
     /// Only one context can be current in a thread, so if you
-    /// want to draw OpenGL geometry to another render target
+    /// want to draw OpenGL Geometry to another render target
     /// (like a RenderWindow) don't forget to activate it again.
     ///
     /// \param active True to activate, false to deactivate

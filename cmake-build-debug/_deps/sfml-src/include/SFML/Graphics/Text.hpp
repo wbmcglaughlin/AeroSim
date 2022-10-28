@@ -424,10 +424,10 @@ private:
     virtual void draw(RenderTarget& target, RenderStates states) const;
 
     ////////////////////////////////////////////////////////////
-    /// \brief Make sure the text's geometry is updated
+    /// \brief Make sure the text's Geometry is updated
     ///
     /// All the attributes related to rendering are cached, such
-    /// that the geometry is only updated when necessary.
+    /// that the Geometry is only updated when necessary.
     ///
     ////////////////////////////////////////////////////////////
     void ensureGeometryUpdate() const;
@@ -444,10 +444,10 @@ private:
     Color               m_fillColor;           ///< Text fill color
     Color               m_outlineColor;        ///< Text outline color
     float               m_outlineThickness;    ///< Thickness of the text's outline
-    mutable VertexArray m_vertices;            ///< Vertex array containing the fill geometry
-    mutable VertexArray m_outlineVertices;     ///< Vertex array containing the outline geometry
+    mutable VertexArray m_vertices;            ///< Vertex array containing the fill Geometry
+    mutable VertexArray m_outlineVertices;     ///< Vertex array containing the outline Geometry
     mutable FloatRect   m_bounds;              ///< Bounding rectangle of the text (in local coordinates)
-    mutable bool        m_geometryNeedUpdate;  ///< Does the geometry need to be recomputed?
+    mutable bool        m_geometryNeedUpdate;  ///< Does the Geometry need to be recomputed?
     mutable Uint64      m_fontTextureId;       ///< The font texture id
 };
 

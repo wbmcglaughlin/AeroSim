@@ -295,11 +295,11 @@ bool Shader::loadFromFile(const std::string& vertexShaderFilename, const std::st
         return false;
     }
 
-    // Read the geometry shader file
+    // Read the Geometry shader file
     std::vector<char> geometryShader;
     if (!getFileContents(geometryShaderFilename, geometryShader))
     {
-        err() << "Failed to open geometry shader file \"" << geometryShaderFilename << "\"" << std::endl;
+        err() << "Failed to open Geometry shader file \"" << geometryShaderFilename << "\"" << std::endl;
         return false;
     }
 
@@ -401,11 +401,11 @@ bool Shader::loadFromStream(InputStream& vertexShaderStream, InputStream& geomet
         return false;
     }
 
-    // Read the geometry shader code from the stream
+    // Read the Geometry shader code from the stream
     std::vector<char> geometryShader;
     if (!getStreamContents(geometryShaderStream, geometryShader))
     {
-        err() << "Failed to read geometry shader from stream" << std::endl;
+        err() << "Failed to read Geometry shader from stream" << std::endl;
         return false;
     }
 
@@ -835,11 +835,11 @@ bool Shader::compile(const char* vertexShaderCode, const char* geometryShaderCod
         return false;
     }
 
-    // Make sure we can use geometry shaders
+    // Make sure we can use Geometry shaders
     if (geometryShaderCode && !isGeometryAvailable())
     {
-        err() << "Failed to create a shader: your system doesn't support geometry shaders "
-              << "(you should test Shader::isGeometryAvailable() before trying to use geometry shaders)" << std::endl;
+        err() << "Failed to create a shader: your system doesn't support Geometry shaders "
+              << "(you should test Shader::isGeometryAvailable() before trying to use Geometry shaders)" << std::endl;
         return false;
     }
 
@@ -887,7 +887,7 @@ bool Shader::compile(const char* vertexShaderCode, const char* geometryShaderCod
         glCheck(GLEXT_glDeleteObject(vertexShader));
     }
 
-    // Create the geometry shader if needed
+    // Create the Geometry shader if needed
     if (geometryShaderCode)
     {
         // Create and compile the shader
@@ -902,7 +902,7 @@ bool Shader::compile(const char* vertexShaderCode, const char* geometryShaderCod
         {
             char log[1024];
             glCheck(GLEXT_glGetInfoLog(geometryShader, sizeof(log), 0, log));
-            err() << "Failed to compile geometry shader:" << std::endl
+            err() << "Failed to compile Geometry shader:" << std::endl
                   << log << std::endl;
             glCheck(GLEXT_glDeleteObject(geometryShader));
             glCheck(GLEXT_glDeleteObject(shaderProgram));

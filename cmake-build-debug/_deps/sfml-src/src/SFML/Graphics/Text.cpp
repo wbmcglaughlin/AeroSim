@@ -196,8 +196,8 @@ void Text::setFillColor(const Color& color)
     {
         m_fillColor = color;
 
-        // Change vertex colors directly, no need to update whole geometry
-        // (if geometry is updated anyway, we can skip this step)
+        // Change vertex colors directly, no need to update whole Geometry
+        // (if Geometry is updated anyway, we can skip this step)
         if (!m_geometryNeedUpdate)
         {
             for (std::size_t i = 0; i < m_vertices.getVertexCount(); ++i)
@@ -214,8 +214,8 @@ void Text::setOutlineColor(const Color& color)
     {
         m_outlineColor = color;
 
-        // Change vertex colors directly, no need to update whole geometry
-        // (if geometry is updated anyway, we can skip this step)
+        // Change vertex colors directly, no need to update whole Geometry
+        // (if Geometry is updated anyway, we can skip this step)
         if (!m_geometryNeedUpdate)
         {
             for (std::size_t i = 0; i < m_outlineVertices.getVertexCount(); ++i)
@@ -395,17 +395,17 @@ void Text::ensureGeometryUpdate() const
     if (!m_font)
         return;
 
-    // Do nothing, if geometry has not changed and the font texture has not changed
+    // Do nothing, if Geometry has not changed and the font texture has not changed
     if (!m_geometryNeedUpdate && m_font->getTexture(m_characterSize).m_cacheId == m_fontTextureId)
         return;
 
     // Save the current fonts texture id
     m_fontTextureId = m_font->getTexture(m_characterSize).m_cacheId;
 
-    // Mark geometry as updated
+    // Mark Geometry as updated
     m_geometryNeedUpdate = false;
 
-    // Clear the previous geometry
+    // Clear the previous Geometry
     m_vertices.clear();
     m_outlineVertices.clear();
     m_bounds = FloatRect();

@@ -4,7 +4,7 @@
 
 #include "menu.h"
 
-void ShowMenuWindow() {
+void ShowMenuWindow(State *state) {
     // Demonstrate the various window flags. Typically you would just use the default!
     static bool no_titlebar = false;
     static bool no_scrollbar = false;
@@ -38,8 +38,9 @@ void ShowMenuWindow() {
     }
 
     ImVec2 button_width = ImVec2(ImGui::GetWindowSize().x * 1.0f, 0.0f);
-    if (ImGui::Button("Geometry", button_width)) {
 
+    if (ImGui::Button("Geometry", button_width)) {
+        *state = geometry;
     }
 
     if (ImGui::Button("Meshing", button_width)) {

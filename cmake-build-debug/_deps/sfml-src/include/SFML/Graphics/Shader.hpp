@@ -46,7 +46,7 @@ class Texture;
 class Transform;
 
 ////////////////////////////////////////////////////////////
-/// \brief Shader class (vertex, geometry and fragment)
+/// \brief Shader class (vertex, Geometry and fragment)
 ///
 ////////////////////////////////////////////////////////////
 class SFML_GRAPHICS_API Shader : GlResource, NonCopyable
@@ -98,9 +98,9 @@ public:
     ~Shader();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry or fragment shader from a file
+    /// \brief Load the vertex, Geometry or fragment shader from a file
     ///
-    /// This function loads a single shader, vertex, geometry or
+    /// This function loads a single shader, vertex, Geometry or
     /// fragment, identified by the second argument.
     /// The source must be a text file containing a valid
     /// shader in GLSL language. GLSL is a C-like language
@@ -108,8 +108,8 @@ public:
     /// read a good documentation for it before writing your
     /// own shaders.
     ///
-    /// \param filename Path of the vertex, geometry or fragment shader file to load
-    /// \param type     Type of shader (vertex, geometry or fragment)
+    /// \param filename Path of the vertex, Geometry or fragment shader file to load
+    /// \param type     Type of shader (vertex, Geometry or fragment)
     ///
     /// \return True if loading succeeded, false if it failed
     ///
@@ -140,9 +140,9 @@ public:
     bool loadFromFile(const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry and fragment shaders from files
+    /// \brief Load the vertex, Geometry and fragment shaders from files
     ///
-    /// This function loads the vertex, geometry and fragment
+    /// This function loads the vertex, Geometry and fragment
     /// shaders. If one of them fails to load, the shader is left
     /// empty (the valid shader is unloaded).
     /// The sources must be text files containing valid shaders
@@ -151,7 +151,7 @@ public:
     /// for it before writing your own shaders.
     ///
     /// \param vertexShaderFilename   Path of the vertex shader file to load
-    /// \param geometryShaderFilename Path of the geometry shader file to load
+    /// \param geometryShaderFilename Path of the Geometry shader file to load
     /// \param fragmentShaderFilename Path of the fragment shader file to load
     ///
     /// \return True if loading succeeded, false if it failed
@@ -162,9 +162,9 @@ public:
     bool loadFromFile(const std::string& vertexShaderFilename, const std::string& geometryShaderFilename, const std::string& fragmentShaderFilename);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry or fragment shader from a source code in memory
+    /// \brief Load the vertex, Geometry or fragment shader from a source code in memory
     ///
-    /// This function loads a single shader, vertex, geometry
+    /// This function loads a single shader, vertex, Geometry
     /// or fragment, identified by the second argument.
     /// The source code must be a valid shader in GLSL language.
     /// GLSL is a C-like language dedicated to OpenGL shaders;
@@ -172,7 +172,7 @@ public:
     /// it before writing your own shaders.
     ///
     /// \param shader String containing the source code of the shader
-    /// \param type   Type of shader (vertex, geometry or fragment)
+    /// \param type   Type of shader (vertex, Geometry or fragment)
     ///
     /// \return True if loading succeeded, false if it failed
     ///
@@ -203,9 +203,9 @@ public:
     bool loadFromMemory(const std::string& vertexShader, const std::string& fragmentShader);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry and fragment shaders from source codes in memory
+    /// \brief Load the vertex, Geometry and fragment shaders from source codes in memory
     ///
-    /// This function loads the vertex, geometry and fragment
+    /// This function loads the vertex, Geometry and fragment
     /// shaders. If one of them fails to load, the shader is left
     /// empty (the valid shader is unloaded).
     /// The sources must be valid shaders in GLSL language. GLSL is
@@ -214,7 +214,7 @@ public:
     /// writing your own shaders.
     ///
     /// \param vertexShader   String containing the source code of the vertex shader
-    /// \param geometryShader String containing the source code of the geometry shader
+    /// \param geometryShader String containing the source code of the Geometry shader
     /// \param fragmentShader String containing the source code of the fragment shader
     ///
     /// \return True if loading succeeded, false if it failed
@@ -225,9 +225,9 @@ public:
     bool loadFromMemory(const std::string& vertexShader, const std::string& geometryShader, const std::string& fragmentShader);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry or fragment shader from a custom stream
+    /// \brief Load the vertex, Geometry or fragment shader from a custom stream
     ///
-    /// This function loads a single shader, vertex, geometry
+    /// This function loads a single shader, vertex, Geometry
     /// or fragment, identified by the second argument.
     /// The source code must be a valid shader in GLSL language.
     /// GLSL is a C-like language dedicated to OpenGL shaders;
@@ -235,7 +235,7 @@ public:
     /// before writing your own shaders.
     ///
     /// \param stream Source stream to read from
-    /// \param type   Type of shader (vertex, geometry or fragment)
+    /// \param type   Type of shader (vertex, Geometry or fragment)
     ///
     /// \return True if loading succeeded, false if it failed
     ///
@@ -266,9 +266,9 @@ public:
     bool loadFromStream(InputStream& vertexShaderStream, InputStream& fragmentShaderStream);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Load the vertex, geometry and fragment shaders from custom streams
+    /// \brief Load the vertex, Geometry and fragment shaders from custom streams
     ///
-    /// This function loads the vertex, geometry and fragment
+    /// This function loads the vertex, Geometry and fragment
     /// shaders. If one of them fails to load, the shader is left
     /// empty (the valid shader is unloaded).
     /// The source codes must be valid shaders in GLSL language.
@@ -277,7 +277,7 @@ public:
     /// it before writing your own shaders.
     ///
     /// \param vertexShaderStream   Source stream to read the vertex shader from
-    /// \param geometryShaderStream Source stream to read the geometry shader from
+    /// \param geometryShaderStream Source stream to read the Geometry shader from
     /// \param fragmentShaderStream Source stream to read the fragment shader from
     ///
     /// \return True if loading succeeded, false if it failed
@@ -673,20 +673,20 @@ public:
     static bool isAvailable();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Tell whether or not the system supports geometry shaders
+    /// \brief Tell whether or not the system supports Geometry shaders
     ///
     /// This function should always be called before using
-    /// the geometry shader features. If it returns false, then
-    /// any attempt to use sf::Shader geometry shader features will fail.
+    /// the Geometry shader features. If it returns false, then
+    /// any attempt to use sf::Shader Geometry shader features will fail.
     ///
     /// This function can only return true if isAvailable() would also
     /// return true, since shaders in general have to be supported in
-    /// order for geometry shaders to be supported as well.
+    /// order for Geometry shaders to be supported as well.
     ///
     /// Note: The first call to this function, whether by your
     /// code or SFML will result in a context switch.
     ///
-    /// \return True if geometry shaders are supported, false otherwise
+    /// \return True if Geometry shaders are supported, false otherwise
     ///
     ////////////////////////////////////////////////////////////
     static bool isGeometryAvailable();
@@ -700,7 +700,7 @@ private:
     /// is not created.
     ///
     /// \param vertexShaderCode   Source code of the vertex shader
-    /// \param geometryShaderCode Source code of the geometry shader
+    /// \param geometryShaderCode Source code of the Geometry shader
     /// \param fragmentShaderCode Source code of the fragment shader
     ///
     /// \return True on success, false if any error happened
@@ -771,7 +771,7 @@ private:
 /// \li Fragment (pixel) shaders, that process pixels
 ///
 /// A sf::Shader can be composed of either a vertex shader
-/// alone, a geometry shader alone, a fragment shader alone,
+/// alone, a Geometry shader alone, a fragment shader alone,
 /// or any combination of them. (see the variants of the
 /// load functions).
 ///
@@ -863,10 +863,10 @@ private:
 ///
 /// Like sf::Texture that can be used as a raw OpenGL texture,
 /// sf::Shader can also be used directly as a raw shader for
-/// custom OpenGL geometry.
+/// custom OpenGL Geometry.
 /// \code
 /// sf::Shader::bind(&shader);
-/// ... render OpenGL geometry ...
+/// ... render OpenGL Geometry ...
 /// sf::Shader::bind(NULL);
 /// \endcode
 ///

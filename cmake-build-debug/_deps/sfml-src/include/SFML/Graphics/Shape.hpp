@@ -256,7 +256,7 @@ protected:
     Shape();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Recompute the internal geometry of the shape
+    /// \brief Recompute the internal Geometry of the shape
     ///
     /// This function must be called by the derived class everytime
     /// the shape's points change (i.e. the result of either
@@ -310,8 +310,8 @@ private:
     Color          m_fillColor;        ///< Fill color
     Color          m_outlineColor;     ///< Outline color
     float          m_outlineThickness; ///< Thickness of the shape's outline
-    VertexArray    m_vertices;         ///< Vertex array containing the fill geometry
-    VertexArray    m_outlineVertices;  ///< Vertex array containing the outline geometry
+    VertexArray    m_vertices;         ///< Vertex array containing the fill Geometry
+    VertexArray    m_outlineVertices;  ///< Vertex array containing the outline Geometry
     FloatRect      m_insideBounds;     ///< Bounding rectangle of the inside (fill)
     FloatRect      m_bounds;           ///< Bounding rectangle of the whole shape (outline + fill)
 };

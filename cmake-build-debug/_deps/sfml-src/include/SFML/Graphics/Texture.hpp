@@ -721,10 +721,10 @@ private:
 ///
 /// Like sf::Shader that can be used as a raw OpenGL shader,
 /// sf::Texture can also be used directly as a raw texture for
-/// custom OpenGL geometry.
+/// custom OpenGL Geometry.
 /// \code
 /// sf::Texture::bind(&texture);
-/// ... render OpenGL geometry ...
+/// ... render OpenGL Geometry ...
 /// sf::Texture::bind(NULL);
 /// \endcode
 ///

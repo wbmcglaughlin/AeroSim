@@ -7,7 +7,10 @@
 
 
 #include "imgui.h"
+#include "state.h"
 
-void ShowMenuWindow();
+#include "geometry/geometry_gui.h"
+
+void ShowMenuWindow(State *state);
 
 #endif //AEROSIM_MENU_H

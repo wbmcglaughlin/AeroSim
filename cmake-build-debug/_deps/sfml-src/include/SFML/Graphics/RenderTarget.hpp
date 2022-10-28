@@ -286,7 +286,7 @@ public:
     /// if you want to make it active on another thread you have
     /// to deactivate it on the previous thread first if it was active.
     /// Only one context can be current in a thread, so if you
-    /// want to draw OpenGL geometry to another render target
+    /// want to draw OpenGL Geometry to another render target
     /// don't forget to activate it again. Activating a render
     /// target will automatically deactivate the previously active
     /// context (if any).
