@@ -1,3 +1,0 @@
-repository='external project URL'
-module='https://github.com/SFML/SFML/archive/refs/tags/2.5.1.zip'
-tag='MD5=2c4438b3e5b2d81a6e626ecf72bf75be'
