@@ -14,10 +14,11 @@ public:
     sf::Vector2<float> geometry_origin{};
     Enclosure enclosure{EnclosureDimensions(100.0f, 100.0f, 100.0f, 100.0f)};
 
+    std::vector<sf::Vector2<float>> vertices;
+
     void draw(sf::RenderWindow *window);
 
     Geometry();
 };
-
 
 #endif //AEROSIM_GEOMETRY_H

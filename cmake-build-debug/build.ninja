@@ -1635,6 +1635,14 @@ build src/CMakeFiles/aero_sim_exe.dir/geometry/EnclosureDimensions.cpp.obj: CXX_
   OBJECT_DIR = src\CMakeFiles\aero_sim_exe.dir
   OBJECT_FILE_DIR = src\CMakeFiles\aero_sim_exe.dir\geometry
 
+build src/CMakeFiles/aero_sim_exe.dir/geometry/add_shapes.cpp.obj: CXX_COMPILER__aero_sim_exe_Debug C$:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/src/geometry/add_shapes.cpp || cmake_object_order_depends_target_aero_sim_exe
+  DEFINES = -DIMGUI_USER_CONFIG=\"imconfig-SFML.h\"
+  DEP_FILE = src\CMakeFiles\aero_sim_exe.dir\geometry\add_shapes.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/imgui-src -IC:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/imgui-sfml-src -IC:/Users/wbmcg/OneDrive/Desktop/CODE/AeroSim/AeroSim/cmake-build-debug/_deps/sfml-src/include
+  OBJECT_DIR = src\CMakeFiles\aero_sim_exe.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\aero_sim_exe.dir\geometry
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target aero_sim_exe
@@ -1643,7 +1651,7 @@ build src/CMakeFiles/aero_sim_exe.dir/geometry/EnclosureDimensions.cpp.obj: CXX_
 #############################################
 # Link the executable src\aero_sim_exe.exe
 
-build src/aero_sim_exe.exe: CXX_EXECUTABLE_LINKER__aero_sim_exe_Debug src/CMakeFiles/aero_sim_exe.dir/main.cpp.obj src/CMakeFiles/aero_sim_exe.dir/menu.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/Geometry.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/geometry_gui.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/Enclosure.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/EnclosureDimensions.cpp.obj | _deps/imgui-sfml-build/libImGui-SFML_d.dll.a _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || _deps/imgui-sfml-build/libImGui-SFML_d.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
+build src/aero_sim_exe.exe: CXX_EXECUTABLE_LINKER__aero_sim_exe_Debug src/CMakeFiles/aero_sim_exe.dir/main.cpp.obj src/CMakeFiles/aero_sim_exe.dir/menu.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/Geometry.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/geometry_gui.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/Enclosure.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/EnclosureDimensions.cpp.obj src/CMakeFiles/aero_sim_exe.dir/geometry/add_shapes.cpp.obj | _deps/imgui-sfml-build/libImGui-SFML_d.dll.a _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || _deps/imgui-sfml-build/libImGui-SFML_d.dll _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = _deps/imgui-sfml-build/libImGui-SFML_d.dll.a  _deps/sfml-build/lib/libsfml-graphics-d.a  _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-system-d.a  -lopengl32  -lglu32  -limm32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = src\CMakeFiles\aero_sim_exe.dir

@@ -9,6 +9,7 @@
 #include "imgui.h"
 #include "Geometry.h"
 #include "../state.h"
+#include "add_shapes.h"
 
 void ShowGeometryWindow(State *state, Geometry *geometry);
 

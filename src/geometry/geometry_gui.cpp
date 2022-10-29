@@ -12,6 +12,27 @@ void ShowGeometryWindow(State *state, Geometry *geometry) {
         return;
     }
 
+    if (ImGui::CollapsingHeader("Enclosure Settings")) {
+        if (ImGui::InputFloat("+x [mm]", &geometry->enclosure.dimensions.pos_x, 1.0f, 10.0f, "%.3f")) {
+            geometry->enclosure.UpdateShape();
+        }
+        if (ImGui::InputFloat("-x [mm]", &geometry->enclosure.dimensions.neg_x, 1.0f, 10.0f, "%.3f")) {
+            geometry->enclosure.UpdateShape();
+        }
+        if (ImGui::InputFloat("+y [mm]", &geometry->enclosure.dimensions.pos_y, 1.0f, 10.0f, "%.3f")) {
+            geometry->enclosure.UpdateShape();
+        }
+        if (ImGui::InputFloat("-y [mm]", &geometry->enclosure.dimensions.neg_y, 1.0f, 10.0f, "%.3f")) {
+            geometry->enclosure.UpdateShape();
+        }
+    }
+
+    if (ImGui::CollapsingHeader("Geometry Settings")) {
+        if (ImGui::Button("Add Rectangle")) {
+            add_rectangle(geometry, 60, 20);
+        }
+    }
+
     if (ImGui::Button("Export To Meshing")) {
 
     }

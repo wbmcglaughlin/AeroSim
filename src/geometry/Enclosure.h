@@ -13,11 +13,14 @@ class Enclosure {
 public:
     sf::Vector2<float> position;
     EnclosureDimensions dimensions;
+
     sf::RectangleShape shape;
+    sf::CircleShape origin;
 
     explicit Enclosure(EnclosureDimensions dimensions);
 
     void draw(sf::RenderWindow *window);
+    void UpdateShape();
 };
 
 #endif //AEROSIM_ENCLOSURE_H

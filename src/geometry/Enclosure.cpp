@@ -13,7 +13,10 @@ Enclosure::Enclosure(EnclosureDimensions dimensions) : dimensions(dimensions) {
     shape.setOutlineThickness(1.0f);
     shape.setFillColor(sf::Color(20, 20, 20, 100));
 
-
+    origin = sf::CircleShape();
+    origin.setRadius(3.0f);
+    origin.setOrigin(3.0f / 2, 3.0f / 2);
+    origin.setFillColor(sf::Color::White);
 }
 
 void Enclosure::draw(sf::RenderWindow *window) {
@@ -22,4 +25,13 @@ void Enclosure::draw(sf::RenderWindow *window) {
     window->setView(view);
 
     window->draw(shape);
+    window->draw(origin);
+}
+
+void Enclosure::UpdateShape() {
+    shape.setSize(sf::Vector2(dimensions.pos_x + dimensions.neg_x, dimensions.pos_y + dimensions.neg_y));
+    shape.setOrigin(dimensions.pos_x, dimensions.pos_y);
+    shape.setPosition(position.x, position.y);
+    shape.setOutlineThickness(1.0f);
+    shape.setFillColor(sf::Color(20, 20, 20, 100));
 }

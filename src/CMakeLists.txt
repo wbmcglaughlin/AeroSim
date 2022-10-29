@@ -1,4 +1,4 @@
-add_executable(aero_sim_exe main.cpp menu.cpp menu.h geometry/Geometry.cpp geometry/Geometry.h geometry/geometry_gui.cpp geometry/geometry_gui.h state.h geometry/Enclosure.cpp geometry/Enclosure.h geometry/EnclosureDimensions.cpp geometry/EnclosureDimensions.h)
+add_executable(aero_sim_exe main.cpp menu.cpp menu.h geometry/Geometry.cpp geometry/Geometry.h geometry/geometry_gui.cpp geometry/geometry_gui.h state.h geometry/Enclosure.cpp geometry/Enclosure.h geometry/EnclosureDimensions.cpp geometry/EnclosureDimensions.h geometry/add_shapes.cpp geometry/add_shapes.h)
 target_link_libraries(aero_sim_exe PRIVATE ImGui-SFML::ImGui-SFML)
 
 # Copy DLLs needed for runtime on Windows
