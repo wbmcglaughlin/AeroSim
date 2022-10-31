@@ -7,6 +7,10 @@
 
 #include "geometry/Geometry.h"
 #include "geometry/geometry_gui.h"
+
+#include "meshing/Meshing.h"
+#include "meshing/meshing_gui.h"
+
 #include "menu.h"
 #include "state.h"
 
@@ -15,6 +19,8 @@ public:
     State state;
 
     Geometry geometry;
+
+    Meshing meshing;
 
     Application();
 

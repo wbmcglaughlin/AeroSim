@@ -13,9 +13,14 @@ Application::Application() {
 
 void Application::loop() {
     switch (state) {
-        case MENU : ShowMenuWindow(&state); break;
-        case GEOMETRY : ShowGeometryWindow(&state, &geometry); break;
+        case MENU :
+            ShowMenuWindow(&state);
+            break;
+        case GEOMETRY :
+            ShowGeometryWindow(&state, &geometry);
+            break;
         case MESHING:
+            ShowMeshingWindow(&state, &meshing);
             break;
         case DEMO :
             ImGui::ShowDemoWindow();

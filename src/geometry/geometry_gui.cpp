@@ -39,7 +39,7 @@ void ShowGeometryWindow(State *state, Geometry *geometry) {
     }
 
     if (ImGui::Button("Export To Meshing")) {
-
+        *state = MESHING;
     }
 
     if (ImGui::Button("Menu")) {
