@@ -11,6 +11,9 @@
 #include "../state.h"
 #include "add_shapes.h"
 
+static float x_point = 50.0f;
+static float y_point = 50.0f;
+
 void ShowGeometryWindow(State *state, Geometry *geometry);
 
 #endif //AEROSIM_GEOMETRY_GUI_H

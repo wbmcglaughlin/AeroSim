@@ -28,8 +28,13 @@ void ShowGeometryWindow(State *state, Geometry *geometry) {
     }
 
     if (ImGui::CollapsingHeader("Geometry Settings")) {
+        if (ImGui::InputFloat("length [mm]", &x_point, 1.0f, 10.0f, "%.3f")) {
+        }
+        if (ImGui::InputFloat("height [mm]", &y_point, 1.0f, 10.0f, "%.3f")) {
+        }
+
         if (ImGui::Button("Add Rectangle")) {
-            add_rectangle(geometry, 60, 20);
+            add_rectangle(geometry, x_point, y_point);
         }
     }
 

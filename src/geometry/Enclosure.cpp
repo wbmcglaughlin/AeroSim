@@ -14,8 +14,8 @@ Enclosure::Enclosure(EnclosureDimensions dimensions) : dimensions(dimensions) {
     shape.setFillColor(sf::Color(20, 20, 20, 100));
 
     origin = sf::CircleShape();
-    origin.setRadius(3.0f);
-    origin.setOrigin(3.0f / 2, 3.0f / 2);
+    origin.setRadius(1.0f);
+    origin.setOrigin(1.0f / 2, 1.0f / 2);
     origin.setFillColor(sf::Color::White);
 }
 
