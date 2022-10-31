@@ -43,7 +43,7 @@ void ShowGeometryWindow(State *state, Geometry *geometry) {
     }
 
     if (ImGui::Button("Menu")) {
-        *state = menu;
+        *state = MENU;
     }
 
     ImGui::End();

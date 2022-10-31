@@ -5,6 +5,6 @@
 #ifndef AEROSIM_STATE_H
 #define AEROSIM_STATE_H
 
-enum State {menu, geometry, meshing, setup, solver, demo};
+enum State {MENU, GEOMETRY, MESHING, SETUP, SOLVER, DEMO};
 
 #endif //AEROSIM_STATE_H

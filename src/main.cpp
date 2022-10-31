@@ -6,12 +6,11 @@
 #include <imgui.h>
 
 #include "menu.h"
-#include "geometry/Geometry.h"
+#include "Application.h"
 #include "state.h"
 
 int main() {
-    State state = menu;
-    Geometry geom = Geometry();
+    Application application = Application();
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Aero Sim");
     window.setFramerateLimit(60);
@@ -30,21 +29,11 @@ int main() {
 
         ImGui::SFML::Update(window, deltaClock.restart());
 
-        switch (state) {
-            case menu : ShowMenuWindow(&state); break;
-            case geometry : ShowGeometryWindow(&state, &geom); break;
-            case demo :
-                ImGui::ShowDemoWindow();
-                break;
-        }
+        application.loop();
 
         window.clear();
 
-        switch(state) {
-            case geometry:
-                geom.draw(&window);
-                break;
-        }
+        application.draw(&window);
 
         ImGui::SFML::Render(window);
         window.display();

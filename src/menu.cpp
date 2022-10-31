@@ -40,7 +40,7 @@ void ShowMenuWindow(State *state) {
     ImVec2 button_width = ImVec2(ImGui::GetWindowSize().x * 1.0f, 0.0f);
 
     if (ImGui::Button("Geometry", button_width)) {
-        *state = geometry;
+        *state = GEOMETRY;
     }
 
     if (ImGui::Button("Meshing", button_width)) {
@@ -56,7 +56,7 @@ void ShowMenuWindow(State *state) {
     }
 
     if (ImGui::Button("Demo", button_width)) {
-        *state = demo;
+        *state = DEMO;
     }
 
     ImGui::End();
