@@ -17,8 +17,11 @@ public:
     std::vector<sf::Vector2<float>> vertices;
 
     void draw(sf::RenderWindow *window);
+    void export_enclosure();
 
     Geometry();
+private:
+    void export_geometry();
 };
 
 #endif //AEROSIM_GEOMETRY_H

@@ -31,4 +31,12 @@ void Geometry::draw(sf::RenderWindow *window) {
     }
 }
 
+void Geometry::export_enclosure() {
+
+}
+
+void Geometry::export_geometry() {
+
+}
+
 Geometry::Geometry() = default;
