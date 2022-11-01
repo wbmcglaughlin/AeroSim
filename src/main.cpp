@@ -5,7 +5,6 @@
 #include <imgui-SFML.h>
 #include <imgui.h>
 
-#include "menu.h"
 #include "Application.h"
 #include "state.h"
 

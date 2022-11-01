@@ -6,27 +6,30 @@
 #define AEROSIM_APPLICATION_H
 
 #include "geometry/Geometry.h"
-#include "geometry/geometry_gui.h"
+#include "geometry/add_shapes.h"
 
 #include "meshing/Meshing.h"
-#include "meshing/meshing_gui.h"
 
-#include "menu.h"
 #include "state.h"
+
+static float x_point = 50.0f;
+static float y_point = 50.0f;
 
 class Application {
 public:
     State state;
-
     Geometry geometry;
-
     Meshing meshing;
 
     Application();
 
     void loop();
-
     void draw(sf::RenderWindow *window);
+
+private:
+    void ShowMenuWindow();
+    void ShowGeometryWindow();
+    void ShowMeshingWindow();
 };
 
 

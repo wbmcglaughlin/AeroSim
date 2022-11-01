@@ -8,10 +8,12 @@
 
 class Meshing {
 public:
+    float **vertices{};
+    float **lines{};
+
     Meshing();
 private:
-    float **vertices{};
-    float **cells{};
+
 };
 
 
