@@ -12,16 +12,14 @@
 class Geometry {
 public:
     sf::Vector2<float> geometry_origin{};
-    Enclosure enclosure{EnclosureDimensions(100.0f, 100.0f, 100.0f, 100.0f)};
+    Enclosure enclosure{100.0f, 100.0f, 100.0f, 100.0f};
 
     std::vector<sf::Vector2<float>> vertices;
 
     void draw(sf::RenderWindow *window);
-    void export_enclosure();
 
     Geometry();
 private:
-    void export_geometry();
 };
 
 #endif //AEROSIM_GEOMETRY_H

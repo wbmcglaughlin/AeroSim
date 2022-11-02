@@ -30,6 +30,7 @@ private:
     void ShowMenuWindow();
     void ShowGeometryWindow();
     void ShowMeshingWindow();
+    void ExportGeometryToMeshing();
 };
 
 

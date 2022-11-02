@@ -60,16 +60,16 @@ void Application::ShowGeometryWindow() {
     }
 
     if (ImGui::CollapsingHeader("Enclosure Settings")) {
-        if (ImGui::InputFloat("+x [mm]", &geometry.enclosure.dimensions.pos_x, 1.0f, 10.0f, "%.3f")) {
+        if (ImGui::InputFloat("+x [mm]", &geometry.enclosure.dimensions[0], 1.0f, 10.0f, "%.3f")) {
             geometry.enclosure.UpdateShape();
         }
-        if (ImGui::InputFloat("-x [mm]", &geometry.enclosure.dimensions.neg_x, 1.0f, 10.0f, "%.3f")) {
+        if (ImGui::InputFloat("-x [mm]", &geometry.enclosure.dimensions[1], 1.0f, 10.0f, "%.3f")) {
             geometry.enclosure.UpdateShape();
         }
-        if (ImGui::InputFloat("+y [mm]", &geometry.enclosure.dimensions.pos_y, 1.0f, 10.0f, "%.3f")) {
+        if (ImGui::InputFloat("+y [mm]", &geometry.enclosure.dimensions[2], 1.0f, 10.0f, "%.3f")) {
             geometry.enclosure.UpdateShape();
         }
-        if (ImGui::InputFloat("-y [mm]", &geometry.enclosure.dimensions.neg_y, 1.0f, 10.0f, "%.3f")) {
+        if (ImGui::InputFloat("-y [mm]", &geometry.enclosure.dimensions[3], 1.0f, 10.0f, "%.3f")) {
             geometry.enclosure.UpdateShape();
         }
     }
@@ -168,3 +168,9 @@ void Application::ShowMenuWindow() {
 
     ImGui::End();
 }
+
+//void Application::ExportGeometryToMeshing() {
+//    sf::Vector2<float> enclosureDimensions[4] = {
+//            sf::Vector2(geometry.enclosure.position)
+//    }
+//}
